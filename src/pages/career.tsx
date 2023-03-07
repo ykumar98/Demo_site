@@ -131,7 +131,7 @@ const Career=()=>{
                <div >
                 <div className={styles.homeHeaderContentInner}>
                   <h1>Come work with us!</h1> 
-                  <p>We're looking for talented individuals that want to do great work with amazing people.</p> 
+                  <p>{"We're looking for talented individuals that want to do great work with amazing people."}</p> 
                 </div> 
                </div> 
             </div>
