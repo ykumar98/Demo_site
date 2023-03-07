@@ -38,7 +38,7 @@ const HeaderContent = ()=>(
   <div className={styles.headerContent}>
      <div className={styles.container}>
         <div className={styles.homeHeaderContentHome}>
-        <h1>WE DON'T JUST DESIGN <br/> WE DEFINE EXPERIENCES</h1>
+        <h1>{"WE DON'T JUST DESIGN"} <br/> WE DEFINE EXPERIENCES</h1>
         <p>We are a bunch of smart and passionate people looking to reinvent the possibilities when
         technology and design meet.</p>
         </div>
