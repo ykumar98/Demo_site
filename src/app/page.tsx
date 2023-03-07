@@ -27,7 +27,7 @@ import mevents from '../app/asset/icons/mevents.png'
 import saltaudios from '../app/asset/icons/saltaudios.png'
 import scb_logo from '../app/asset/icons/scb-logo.png'
 import tie_silicon_log from '../app/asset/icons/tie-silicon-logo.png'
-import tagstone from '../app/asset/icons/tagstone.png'
+import tagstone from '../app/asset/icons/Tagstone.png'
 import weinvest from '../app/asset/icons/weinvest.png'
 import trueRCM from '../app/asset/icons/trueRCM.png'
 
