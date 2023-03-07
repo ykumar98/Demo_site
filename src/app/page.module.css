@@ -18,6 +18,9 @@
   position: fixed;
   width: 100%;
   display: flex;
+  z-index: 99;
+  transition: width 2s ease;
+  top: 0;
 }
 .col1 {
   width: 50%;
@@ -413,6 +416,7 @@
   font-size: 14px;
   font-family: Helvetica;
   color: #231f20;
+  text-decoration: none;
 }
 
 .socialMedia {
@@ -428,6 +432,288 @@
   border: solid 1px rgba(255, 216, 0, 1)
 }
 
+.overlay {
+  height: 100%;
+  width: 475px;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  background-color: rgba(38,38,38,1);
+  overflow: hidden;
+  transition: .5s;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 120px;
+  font-size: 60px;
+}
+
+.overlayContent {
+  position: relative;
+  top: 10%;
+  left: 100px;
+  width: 100%;
+  height: calc(100% - 10%);
+}
+
+.overlay a {
+  padding: 0;
+  text-decoration: none;
+  font-size: 27px;
+  color: #fff;
+  display: table;
+  transition: .3s;
+  line-height: 44px;
+  font-family: Helvetica;
+  font-weight: 550;
+}
+
+.overlayAddressContent {
+  width: calc(100% - 100px);
+  padding: 30px 0;
+}
+
+.overlayAddressContentOne .overlayAddressContentOneContent:first-child {
+  padding-left: 0;
+}
+
+.overlayAddressContentOneContent h6 {
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.overlayAddressContent p {
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: Helvetica;
+  color: #fff;
+  font-weight: 300;
+}
+
+.overlayAddressContent a {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: Helvetica;
+  color: #fff;
+  font-weight: 300;
+}
+
+
+/* contact page css*/
+
+.contactUsWrap {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.contactRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 6%;
+}
+
+.colContact {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.contactUsWrapForm {
+  width: 80%;
+  padding-top: 50px;
+}
+
+.contactUsWrapForm h3 {
+  position: relative;
+  color: #231f20;
+  font-size: 36px;
+  font-family: Helvetica;
+  line-height: 35px;
+  padding-bottom: 35px;
+  margin: 0;
+}
+
+.contactUsWrapForm h3::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ffd800;
+}
+
+.contactUsWrapForm h5 {
+  color: #555;
+  font-size: 18px;
+  line-height: 33px;
+  font-family: Helvetica;
+  padding-top: 10px;
+  font-weight: 100;
+  margin: 10px;
+}
+
+.contactUsWrapForm p {
+  font-size: 20px;
+  color: #555;
+  font-family: Helvetica;
+  font-weight: 550;
+  margin-bottom: 16px;
+  margin-top: auto;
+}
+
+.checkboxGroup {
+  padding: 30px 0px;
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+}
+
+h4.formTitle {
+  color: #231f20;
+  opacity: .5;
+  font-size: 18px;
+  font-family: Helvetica;
+  margin: 0px;
+}
+
+span.info {
+  color: red;
+  margin: 10px;
+}
+
+.checkboxGroup label {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.checkboxGroup label input {
+  visibility: hidden;
+  width: 0;
+}
+
+.checkboxGroup label span {
+  color: #231f20;
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight:600;
+  border: 1px solid #d5d5d5;
+  border-radius: 24px;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: .5s;
+}
+
+.checkboxGroup label span:hover {
+  background-color: #ffd200;
+  transition: .5s;
+  border-color: #ffd200
+}
+
+.radiobuttonGroup {
+  padding-bottom: 40px;
+  padding-right: 45px;
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+}
+
+h4.formTitle {
+  color: #231f20;
+  opacity: .5;
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
+.radiobuttonGroup input {
+  visibility: hidden;
+  display: none;
+}
+
+.radiobuttonGroup label {
+  display: inline-block;
+  color: #231f20;
+  font-size: 14px;
+  font-family: Helvetica;
+  font-weight:600;
+  border: 1px solid #d5d5d5;
+  border-radius: 24px;
+  padding: 8px 24px;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: .5s;
+}
+
+.radiobuttonGroup label:hover {
+  background-color: #ffd200;
+  transition: .5s;
+  border-color: #ffd200
+}
+
+.rowInput{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+}
+
+.colInput {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.inputField {
+  padding-bottom: 10px;
+}
+
+.inputField input {
+  border: 0;
+  border-bottom: 0.3px solid #979797;
+  padding-bottom: 12px;
+  background-color: transparent;
+  width: 91%;
+  outline: 0;
+  margin-bottom: 10px;
+}
+
+.contactUsWrapFormDetails .virtualAddress a {
+  color: black;
+  padding-bottom: 10px;
+  display: table;
+  text-decoration: none;
+  font-family: helvetica;
+}
+
+.physicalAddress {
+  padding-top: 15px;
+}
+
+.physicalAddress a {
+  font-size: 14px;
+  font-family: Helvetica;
+  color: #231f20;
+}
+
+.contactUsWrapFormDetails h4 {
+  font-size: 15px;
+  padding-bottom: 10px;
+  font-family: helvetica;
+  margin: 0px;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -439,6 +725,210 @@
   font-family: var(--font-mono);
 }
 
+.fileUpload {
+  position: relative;
+}
+
+.inputField {
+  padding-bottom: 10px;
+}
+
+.inputFieldFullWidth {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.exploreMore {
+  text-align: center;
+}
+
+.exploreMoreContact .exploreMoreanchore {
+  text-align: left;
+}
+
+input#sendmessage {
+  display: inline-block;
+  padding: 10px 40px;
+  border: 2px solid #ffd200;
+  border-radius: 24px;
+  overflow: hidden;
+  font-family: Helvetica;
+}
+
+.exploreMoreContact input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+input#sendmessage:hover {
+  background-color: #ffd200
+}
+
+.colContact2 {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.contactUsWrapFormDetails {
+  padding-top: 50px;
+  background-color: #ffd800;
+  padding: 36px;
+  margin-right: 60px;
+}
+
+.contactUsWrapFormDetails h3 {
+  padding-bottom: 20px;
+  font-size: 24px;
+  margin: 0;
+  font-family: helvetica;
+}
+
+.contactUsWrapFormDetails .socialMedia {
+  padding-top: 25px;
+  text-align: left;
+}
+
+.contactUsWrapFormDetails h3 {
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+.contactUsWrapFormDetails .socialMedia ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.contactUsWrapFormDetails .socialMedia ul li a {
+  margin-right: 8px;
+}
+
+.homeHeader {
+  width: 100%;
+  height: 100%;
+}
+
+.homeHeaderServices img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homeHeaderContact img {
+  object-fit: scale-down;
+  object-position: right;
+}
+
+.homeHeader:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.homeHeaderContent {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  z-index: 9;
+}
+
+.homeHeaderContentInner {
+  max-width: 430px;
+  margin-left: 6%;
+}
+
+.homeHeaderContentInner h1 {
+  margin-top: 9px;
+  position: relative;
+  font-size: 36px;
+  color: #fff;
+  font-family: Helvetica;
+  line-height: 42px;
+  padding-bottom: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.homeHeaderContentInner h1:after {
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  background-color: #ffd800;
+}
+
+.homeHeaderContentInner p {
+  color: #fff;
+  font-family: Helvetica;
+}
+
+section.currentOpenning {
+  padding: 110px 0 50px 0;
+}
+
+.currentOpenninglistWrap {
+  display: flex;
+  padding: 20px 0;
+}
+
+.currentOpenningList {
+  width: 50%;
+  background-color: #efefef;
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.currentOpenningList h5 {
+  font-family: Helvetica;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  color: #000;
+}
+
+.apply {
+  padding-top: 25px;
+}
+
+.apply h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000;
+  font-family: Helvetica;
+  font-weight: 100;
+}
+
+span.width {
+  height: 3px;
+  width: 0;
+  position: absolute;
+  background-color: #ffd800;
+  bottom: 0;
+  left: 0;
+  transition: width .5s;
+}
+
+.currentOpenningList:hover span.width {
+  width: 100%
+}
+
+.whoWeAreBanner {
+  width: 1260px;
+  height: 428px;
+  padding-top: 120px;
+}
 
 .description a {
   display: flex;

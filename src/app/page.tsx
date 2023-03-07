@@ -1,12 +1,14 @@
 "use client";
 import { useState,useRef } from 'react';
 import Image from 'next/image'
+import Link from 'next/link'
 // import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 import sdLogo from '../app/asset/svg/logoWhite.svg';
 import navLogo from '../app/asset/svg/hamburger.svg';
 import logoWhite from '../app/asset/svg/logoText.svg';
 import linkedIn from '../app/asset/svg/linkedin.svg';
+import closeIcon from '../app/asset/svg/closeIcon.svg';
 import mobileShopping from '../app/asset/images/mobileShopping.png'
 import digitalMusic from '../app/asset/images/digitalMusic.jpg'
 import optimizeDigital from '../app/asset/images/optimizingDigital.jpg'
@@ -31,50 +33,18 @@ import trueRCM from '../app/asset/icons/trueRCM.png'
 
 
 // const inter = Inter({ subsets: ['latin'] })
-
-const Header=  ()=>(
-    <header>
-      <div className={styles.container}>
-        <div className='header'>
-          <div className={styles.row}>
-            <div className={styles.col1}>
-              <Image
-                  className={styles.logo}
-                  src={sdLogo}
-                  alt="#"
-                  width={200}
-                  height={47}
-                  priority
-              />
-            </div>
-            <div className={styles.col2}>
-              <Image 
-                className={styles.logo} 
-                src={navLogo} alt="#"
-                width={190}
-                height={45}
-                priority
-              />
-            </div> 
-          </div>
-        </div>
-      </div>
-  </header>
-  );
   
 const HeaderContent = ()=>(
   <div className={styles.headerContent}>
      <div className={styles.container}>
         <div className={styles.homeHeaderContentHome}>
-        <h1>{"WE DON'T JUST DESIGN"} <br/> {"WE DEFINE EXPERIENCES"}</h1>
-        <p>{"We are a bunch of smart and passionate people looking to reinvent the possibilities when technology and design meet."}</p>
+        <h1>WE DON'T JUST DESIGN <br/> WE DEFINE EXPERIENCES</h1>
+        <p>We are a bunch of smart and passionate people looking to reinvent the possibilities when
+        technology and design meet.</p>
         </div>
      </div>
   </div>
 );
-function handleclick (){
-  
-}
 const WhatWeDo = ()=>{
     const [tabToggle,setTabToggle] = useState(1);
     const tab1Ref:any = useRef(null);
@@ -438,13 +408,91 @@ const Footer = ()=>{
   )
 }
 
+
 export default function Home() {
+  const [navToggle, setNavToggle] = useState(false);
+  const NavBar = ()=>{
+    return(
+      <div id="navBar" className={styles.overlay}>
+        <a href="javascript:void(0)" className={styles.closebtn}>
+          <Image 
+            onClick = {()=>{
+            setNavToggle(false)
+            }}
+           src={closeIcon} alt="#"/>
+        </a>
+        <div className={styles.overlayContent}>
+          <Link href="/">Home</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/work">Work</Link>
+          <Link href="/whoWeAre">Who We Are</Link>
+          <Link href="/forStartups">For Startups</Link>
+          <Link href="/career">Career</Link>
+          <Link href="/contact">Contact</Link>
+          <div className={styles.overlayAddressContent}>
+            <div className={styles.overlayAddressContentOne}>
+              <div className={styles.overlayAddressContentOneContent}>
+                <h6>USA</h6>
+                <p>
+                186 Princeton Hightstown Rd, Bldg 3,<br/>
+                Suite 10, West Windsor, NJ 08550
+                </p>
+              </div>
+              <div className={styles.overlayAddressContentOneContent}>
+                <h6>India</h6>
+                <p>
+                No.108, Theyagaraya Road, T Nagar,<br/>
+                Chennai - 17, India.
+                </p>
+              </div>
+            </div>
+            <div className="overlay-addressContent-Two">
+              <a href="mailto:hello@studiodiseno.com">E-mail: hello@studiodiseno.com</a>
+              <a href="tel:+91 44 42632026">Contact: +91 44 42632026m</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+  const Header=  ()=>(
+        <div className='header'>
+          <div className={styles.row}>
+            <div className={styles.col1}>
+              <Image
+                  className={styles.logo}
+                  src={sdLogo}
+                  alt="#"
+                  width={200}
+                  height={47}
+                  priority
+              />
+            </div>
+            <div className={styles.col2}>
+              <Image 
+                className={styles.logo} 
+                src={navLogo} alt="#"
+                width={190}
+                height={45}
+                onClick = {()=>{
+                  setNavToggle(true)
+                }}
+                priority
+              />
+            </div> 
+          </div>
+        </div>
+  );
+
   return (
     <div>
       <section className={styles.headerSection}>
         <main className={styles.main}>
           <div>
             <Header/>
+            {navToggle && 
+              <NavBar/>
+            }
             <HeaderContent/>
           </div>
         </main>

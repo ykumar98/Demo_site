@@ -1,0 +1,43 @@
+body{
+    margin:0px
+}
+
+.container {
+    max-width: 1140px;
+}
+
+.currentOpenningWrap h2 {
+    font-family: Helvetica;
+    font-size: 30px;
+    font-weight: 100;
+    margin:0px
+}
+
+span.line {
+    width: 65px;
+    height: 2px;
+    background-color: #c6d4d8;
+    position: absolute;
+}
+
+h5,h4,h1{
+    margin: 0;
+}
+
+.apply {
+    padding-top: 25px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: helvetica ;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
