@@ -30,6 +30,7 @@ import tie_silicon_log from '../app/asset/icons/tie-silicon-logo.png'
 import tagstone from '../app/asset/icons/Tagstone.png'
 import weinvest from '../app/asset/icons/weinvest.png'
 import trueRCM from '../app/asset/icons/trueRCM.png'
+import { CLIENT_RENEG_LIMIT } from 'tls';
 
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -409,7 +410,7 @@ const Footer = ()=>{
 }
 
 
-export default function Home() {
+export default function Home({post}:{post:any}) {
   const [navToggle, setNavToggle] = useState(false);
   const NavBar = ()=>{
     return(
@@ -448,7 +449,7 @@ export default function Home() {
             </div>
             <div className="overlay-addressContent-Two">
               <a href="mailto:hello@studiodiseno.com">E-mail: hello@studiodiseno.com</a>
-              <a href="tel:+91 44 42632026">Contact: +91 44 42632026m</a>
+              <a href="tel:+91 44 42632026">{post}</a>
             </div>
           </div>
         </div>
@@ -517,4 +518,13 @@ export default function Home() {
       </footer>
    </div>
   )
+}
+export async function getStaticProps() {
+  var post:string= "Contact: +91 44 42632026m";
+  console.log("Data-->>>>>>>",post)
+  return{
+    props:{
+      post
+    }
+  }
 }
