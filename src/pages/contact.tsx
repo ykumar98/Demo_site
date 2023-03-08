@@ -6,7 +6,7 @@ import styles from '../app/page.module.css';
 import Image from 'next/image'
 import linkedIn from '../app/asset/svg/linkedin.svg';
 import "../app/contact.css";
-const Contact =()=>{
+const Contact =({post}:{post:any})=>{
   const [navToggle, setNavToggle] = useState(false);
   const handleClick = ()=>{
     if(navToggle){
@@ -104,7 +104,7 @@ const Contact =()=>{
               <h3>Contact us</h3>
               <div className={styles.virtualAddress}>
                 <a href="mailto:hello@studiodiseno.com">E-mail: hello@studiodiseno.com</a>
-                <a href="tel:+91 44 42632026">Contact: +91 44 42632026m</a>
+                <a href="tel:+91 44 42632026">{post}</a>
               </div>
               <div className={styles.physicalAddress}>
                 <h4>
@@ -136,6 +136,14 @@ const Contact =()=>{
     </div>
   </>
   )
+}
+export async function getStaticProps() {
+  var post:string= "Contact: +91 44 42632026m";
+  return{
+    props:{
+      post
+    }
+  }
 }
  
 export default Contact;
