@@ -25,6 +25,7 @@ import tie_silicon_log from '../app/asset/icons/tie-silicon-logo.png'
 import tagstone from '../app/asset/icons/Tagstone.png'
 import weinvest from '../app/asset/icons/weinvest.png'
 import trueRCM from '../app/asset/icons/trueRCM.png'
+import career from '@/app/components/utils/utilsCareer';
 
 const OurClientWrap = ()=>{
     return(
@@ -139,7 +140,7 @@ const Career=()=>{
           <section className={styles.currentOpenning}>
             <div className='container' style={{marginLeft:"7%"}}>
                <div className="currentOpenningWrap">
-                 <h2>Current Openings</h2>
+                 <h2>{career.currentOpenings}</h2>
                  <div className={styles.currentOpenninglistWrap}>
                     <a className={styles.currentOpenningList}>
                       <div>
